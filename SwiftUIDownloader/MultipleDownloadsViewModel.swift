@@ -42,6 +42,7 @@ class MultipleDownloadsViewModel: NSObject, ObservableObject {
 		let config = URLSessionConfiguration.background(withIdentifier: "me.curia.MySessionMultiple")
 		config.isDiscretionary = true
 		config.sessionSendsLaunchEvents = true
+		config.httpAdditionalHeaders = ["User-Agent": ""]
 		//config.waitsForConnectivity = false
 		//config.allowsCellularAccess = true
 		//config.allowsConstrainedNetworkAccess = true

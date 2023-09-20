@@ -37,13 +37,13 @@ class DownloadForegroundViewModel: NSObject, ObservableObject {
 		}
 		
 		do {
-			//let config = URLSessionConfiguration.default
+			let config = URLSessionConfiguration.default
+			config.httpAdditionalHeaders = ["User-Agent": ""]
 			//config.waitsForConnectivity = false
 			//config.allowsCellularAccess = true
 			//config.allowsConstrainedNetworkAccess = true
-			//let urlSession = URLSession(configuration: config)
-			//let (data, response) = try await urlSession.data(from: URL(string: fileToDownload)!)
-			let (data, response) = try await URLSession.shared.data(from: URL(string: fileToDownload)!)
+			let urlSession = URLSession(configuration: config)
+			let (data, response) = try await urlSession.data(from: URL(string: fileToDownload)!)
 			guard let httpResponse = response as? HTTPURLResponse else {
 				self.error = "No HTTP Result"
 				return
@@ -75,13 +75,13 @@ class DownloadForegroundViewModel: NSObject, ObservableObject {
 		}
 		
 		do {
-			//let config = URLSessionConfiguration.default
+			let config = URLSessionConfiguration.default
+			config.httpAdditionalHeaders = ["User-Agent": ""]
 			//config.waitsForConnectivity = false
 			//config.allowsCellularAccess = true
 			//config.allowsConstrainedNetworkAccess = true
-			//let urlSession = URLSession(configuration: config)
-			//let (localURL, response) = try await urlSession.download(from: URL(string: fileToDownload)!)
-			let (localURL, response) = try await URLSession.shared.download(from: URL(string: fileToDownload)!)
+			let urlSession = URLSession(configuration: config)
+			let (localURL, response) = try await urlSession.download(from: URL(string: fileToDownload)!)
 			guard let httpResponse = response as? HTTPURLResponse else {
 				self.error = "No HTTP Result"
 				return
@@ -104,16 +104,14 @@ class DownloadForegroundViewModel: NSObject, ObservableObject {
 	}
 	
 	// https://developer.apple.com/documentation/foundation/url_loading_system/downloading_files_from_websites
-	//private lazy var urlSession: URLSession = {
-	//	let config = URLSessionConfiguration.default
-	//	config.waitsForConnectivity = false
-	//	config.allowsCellularAccess = true
-	//	config.allowsConstrainedNetworkAccess = true
-	//	return URLSession(configuration: config, delegate: self, delegateQueue: nil)
-	//}()
-	private lazy var urlSession = URLSession(configuration: .default,
-											 delegate: self,
-											 delegateQueue: nil)
+	private lazy var urlSession: URLSession = {
+		let config = URLSessionConfiguration.default
+		config.httpAdditionalHeaders = ["User-Agent": ""]
+		//config.waitsForConnectivity = false
+		//config.allowsCellularAccess = true
+		//config.allowsConstrainedNetworkAccess = true
+		return URLSession(configuration: config, delegate: self, delegateQueue: nil)
+	}()
 	@Published private var downloadTask: URLSessionDownloadTask? = nil
 	func downloadToFileWithProgress() async {
 		self.isBusy = true
@@ -121,7 +119,7 @@ class DownloadForegroundViewModel: NSObject, ObservableObject {
 		self.percentage = 0
 		self.fileName = nil
 		self.downloadedSize = nil
-		
+
 		let downloadTask = urlSession.downloadTask(with: URL(string: fileToDownload)!)
 		downloadTask.resume()
 		self.downloadTask = downloadTask

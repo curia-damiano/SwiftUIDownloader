@@ -29,6 +29,7 @@ class DownloadBackgroundViewModel: NSObject, ObservableObject {
 		let config = URLSessionConfiguration.background(withIdentifier: "me.curia.MySessionBackground")
 		config.isDiscretionary = true
 		config.sessionSendsLaunchEvents = true
+		config.httpAdditionalHeaders = ["User-Agent": ""]
 		//config.waitsForConnectivity = false
 		//config.allowsCellularAccess = true
 		//config.allowsConstrainedNetworkAccess = true
