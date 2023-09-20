@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A88190592790BB4900CF0B0D /* ConcurrencyCompatibility in Frameworks */ = {isa = PBXBuildFile; productRef = A88190582790BB4900CF0B0D /* ConcurrencyCompatibility */; };
 		A8BEAF2827837668004685A5 /* SwiftUIDownloaderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BEAF2727837668004685A5 /* SwiftUIDownloaderApp.swift */; };
 		A8BEAF2A27837668004685A5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BEAF2927837668004685A5 /* ContentView.swift */; };
 		A8BEAF2C27837669004685A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8BEAF2B27837669004685A5 /* Assets.xcassets */; };
@@ -39,7 +38,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A88190592790BB4900CF0B0D /* ConcurrencyCompatibility in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,7 +102,6 @@
 			);
 			name = SwiftUIDownloader;
 			packageProductDependencies = (
-				A88190582790BB4900CF0B0D /* ConcurrencyCompatibility */,
 			);
 			productName = SwiftUIDownloader;
 			productReference = A8BEAF2427837668004685A5 /* SwiftUIDownloader.app */;
@@ -135,7 +132,6 @@
 			);
 			mainGroup = A8BEAF1B27837668004685A5;
 			packageReferences = (
-				A88190572790BB4900CF0B0D /* XCRemoteSwiftPackageReference "ConcurrencyCompatibility" */,
 			);
 			productRefGroup = A8BEAF2527837668004685A5 /* Products */;
 			projectDirPath = "";
@@ -228,7 +224,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -283,7 +279,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -309,7 +305,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -339,7 +335,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -375,25 +371,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		A88190572790BB4900CF0B0D /* XCRemoteSwiftPackageReference "ConcurrencyCompatibility" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/zwaldowski/ConcurrencyCompatibility";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		A88190582790BB4900CF0B0D /* ConcurrencyCompatibility */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A88190572790BB4900CF0B0D /* XCRemoteSwiftPackageReference "ConcurrencyCompatibility" */;
-			productName = ConcurrencyCompatibility;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A8BEAF1C27837668004685A5 /* Project object */;
 }

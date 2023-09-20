@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import ConcurrencyCompatibility
 
 @MainActor
 class DownloadForegroundViewModel: NSObject, ObservableObject {
@@ -43,8 +42,8 @@ class DownloadForegroundViewModel: NSObject, ObservableObject {
 			//config.allowsCellularAccess = true
 			//config.allowsConstrainedNetworkAccess = true
 			//let urlSession = URLSession(configuration: config)
-			//let (data, response) = try await urlSession.compatibilityData(from: URL(string: fileToDownload)!)
-			let (data, response) = try await URLSession.shared.compatibilityData(from: URL(string: fileToDownload)!)
+			//let (data, response) = try await urlSession.data(from: URL(string: fileToDownload)!)
+			let (data, response) = try await URLSession.shared.data(from: URL(string: fileToDownload)!)
 			guard let httpResponse = response as? HTTPURLResponse else {
 				self.error = "No HTTP Result"
 				return
@@ -81,8 +80,8 @@ class DownloadForegroundViewModel: NSObject, ObservableObject {
 			//config.allowsCellularAccess = true
 			//config.allowsConstrainedNetworkAccess = true
 			//let urlSession = URLSession(configuration: config)
-			//let (localURL, response) = try await urlSession.compatibilityDownload(from: URL(string: fileToDownload)!)
-			let (localURL, response) = try await URLSession.shared.compatibilityDownload(from: URL(string: fileToDownload)!)
+			//let (localURL, response) = try await urlSession.download(from: URL(string: fileToDownload)!)
+			let (localURL, response) = try await URLSession.shared.download(from: URL(string: fileToDownload)!)
 			guard let httpResponse = response as? HTTPURLResponse else {
 				self.error = "No HTTP Result"
 				return
