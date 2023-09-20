@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "ConcurrencyCompatibility",
+        "repositoryURL": "https://github.com/zwaldowski/ConcurrencyCompatibility",
+        "state": {
+          "branch": "main",
+          "revision": "6b1c5d49588a2cb0e322246a1ac0a804835648a4",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
