@@ -38,8 +38,13 @@ class DownloadForegroundViewModel: NSObject, ObservableObject {
 		}
 		
 		do {
-			let request = URLRequest(url: URL(string: fileToDownload)!)
-			let (data, response) = try await URLSession.shared.compatibilityData(for: request)
+			//let config = URLSessionConfiguration.default
+			//config.waitsForConnectivity = false
+			//config.allowsCellularAccess = true
+			//config.allowsConstrainedNetworkAccess = true
+			//let urlSession = URLSession(configuration: config)
+			//let (data, response) = try await urlSession.compatibilityData(from: URL(string: fileToDownload)!)
+			let (data, response) = try await URLSession.shared.compatibilityData(from: URL(string: fileToDownload)!)
 			guard let httpResponse = response as? HTTPURLResponse else {
 				self.error = "No HTTP Result"
 				return
@@ -71,6 +76,12 @@ class DownloadForegroundViewModel: NSObject, ObservableObject {
 		}
 		
 		do {
+			//let config = URLSessionConfiguration.default
+			//config.waitsForConnectivity = false
+			//config.allowsCellularAccess = true
+			//config.allowsConstrainedNetworkAccess = true
+			//let urlSession = URLSession(configuration: config)
+			//let (localURL, response) = try await urlSession.compatibilityDownload(from: URL(string: fileToDownload)!)
 			let (localURL, response) = try await URLSession.shared.compatibilityDownload(from: URL(string: fileToDownload)!)
 			guard let httpResponse = response as? HTTPURLResponse else {
 				self.error = "No HTTP Result"
@@ -94,6 +105,13 @@ class DownloadForegroundViewModel: NSObject, ObservableObject {
 	}
 	
 	// https://developer.apple.com/documentation/foundation/url_loading_system/downloading_files_from_websites
+	//private lazy var urlSession: URLSession = {
+	//	let config = URLSessionConfiguration.default
+	//	config.waitsForConnectivity = false
+	//	config.allowsCellularAccess = true
+	//	config.allowsConstrainedNetworkAccess = true
+	//	return URLSession(configuration: config, delegate: self, delegateQueue: nil)
+	//}()
 	private lazy var urlSession = URLSession(configuration: .default,
 											 delegate: self,
 											 delegateQueue: nil)
