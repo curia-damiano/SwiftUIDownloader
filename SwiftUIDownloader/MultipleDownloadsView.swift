@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MultipleDownloadsView: View {
 	@ObservedObject var vm: MultipleDownloadsViewModel
-	
+
 	var body: some View {
 		VStack {
 			List {
@@ -31,7 +31,7 @@ struct MultipleDownloadsView_Previews: PreviewProvider {
 struct MultipleDownloadsListRowView: View {
 	let vm: MultipleDownloadsViewModel
 	@ObservedObject var download: DownloadModel
-	
+
 	var body: some View {
 		VStack {
 			Group {
@@ -54,13 +54,13 @@ struct MultipleDownloadsListRowView: View {
 				vm.downloadInBackground(download: download)
 			}
 			.disabled(download.isBusy)
-			
+
 			HStack {
 				Button("Pause") {
 					vm.pauseDownload(download: download)
 				}
 				.disabled(!vm.canPauseDownload(download: download))
-				
+
 				Button("Resume") {
 					vm.resumeDownload(download: download)
 				}

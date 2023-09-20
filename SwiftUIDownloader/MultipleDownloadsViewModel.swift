@@ -18,7 +18,7 @@ class DownloadModel: Identifiable, ObservableObject {
 	@Published var downloadedSize: UInt64? = nil
 	@Published var downloadTask: URLSessionDownloadTask? = nil
 	@Published var resumeData: Data? = nil
-	
+
 	init(fileToDownload: String) {
 		self.fileToDownload = fileToDownload
 	}
@@ -43,9 +43,9 @@ class MultipleDownloadsViewModel: NSObject, ObservableObject {
 		config.isDiscretionary = true
 		config.sessionSendsLaunchEvents = true
 		config.httpAdditionalHeaders = ["User-Agent": ""]
-		//config.waitsForConnectivity = false
-		//config.allowsCellularAccess = true
-		//config.allowsConstrainedNetworkAccess = true
+		// config.waitsForConnectivity = false
+		// config.allowsCellularAccess = true
+		// config.allowsConstrainedNetworkAccess = true
 		return URLSession(configuration: config, delegate: self, delegateQueue: nil)
 	}()
 	func downloadInBackground(download: DownloadModel) {
@@ -54,15 +54,15 @@ class MultipleDownloadsViewModel: NSObject, ObservableObject {
 		download.percentage = 0
 		download.fileName = nil
 		download.downloadedSize = nil
-		
+
 		let downloadTask = urlSession.downloadTask(with: URL(string: download.fileToDownload)!)
-		//downloadTask.earliestBeginDate = Date().addingTimeInterval(60 * 60)
-		//downloadTask.countOfBytesClientExpectsToSend = 200
-		//downloadTask.countOfBytesClientExpectsToReceive = 500 * 1024
+		// downloadTask.earliestBeginDate = Date().addingTimeInterval(60 * 60)
+		// downloadTask.countOfBytesClientExpectsToSend = 200
+		// downloadTask.countOfBytesClientExpectsToReceive = 500 * 1024
 		downloadTask.resume()
 		download.downloadTask = downloadTask
 	}
-	
+
 	// https://developer.apple.com/documentation/foundation/url_loading_system/pausing_and_resuming_downloads
 	func canPauseDownload(download: DownloadModel) -> Bool {
 		return download.downloadTask != nil && download.resumeData == nil
@@ -79,7 +79,7 @@ class MultipleDownloadsViewModel: NSObject, ObservableObject {
 			Task { @MainActor in download.resumeData = resumeData }
 		}
 	}
-	
+
 	// https://developer.apple.com/documentation/foundation/url_loading_system/pausing_and_resuming_downloads
 	func canResumeDownload(download: DownloadModel) -> Bool {
 		return download.resumeData != nil
@@ -96,8 +96,7 @@ class MultipleDownloadsViewModel: NSObject, ObservableObject {
 	}
 }
 
-extension MultipleDownloadsViewModel: URLSessionDownloadDelegate
-{
+extension MultipleDownloadsViewModel: URLSessionDownloadDelegate {
 	// https://developer.apple.com/documentation/foundation/url_loading_system/downloading_files_from_websites
 	func urlSession(_ session: URLSession,
 					downloadTask: URLSessionDownloadTask,
@@ -111,7 +110,7 @@ extension MultipleDownloadsViewModel: URLSessionDownloadDelegate
 
 		Task { @MainActor in download.percentage = percentage }
 	}
-	
+
 	// https://developer.apple.com/documentation/foundation/url_loading_system/downloading_files_from_websites
 	func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didFinishDownloadingTo location: URL) {
 		/*guard let absoluteUrl = downloadTask.originalRequest?.url?.absoluteString else {
@@ -123,11 +122,11 @@ extension MultipleDownloadsViewModel: URLSessionDownloadDelegate
 		guard let download = self.downloads.first(where: { $0.downloadTask == downloadTask }) else {
 			return
 		}
-		
+
 		defer {
 			Task { @MainActor in download.isBusy = false }
 		}
-		
+
 		guard let httpResponse = downloadTask.response as? HTTPURLResponse else {
 			Task { @MainActor in download.error = "No HTTP Result" }
 			return
@@ -136,11 +135,11 @@ extension MultipleDownloadsViewModel: URLSessionDownloadDelegate
 			Task { @MainActor in download.error = "Http Result: \(httpResponse.statusCode)" }
 			return
 		}
-		
+
 		let fileName = location.path
 		let attributes = try? FileManager.default.attributesOfItem(atPath: fileName)
 		let fileSize = attributes?[.size] as? UInt64
-		
+
 		Task { @MainActor in
 			download.error = nil
 			download.percentage = 100
@@ -149,7 +148,7 @@ extension MultipleDownloadsViewModel: URLSessionDownloadDelegate
 			download.downloadTask = nil
 		}
 	}
-	
+
 	// https://developer.apple.com/documentation/foundation/url_loading_system/pausing_and_resuming_downloads
 	func urlSession(_ session: URLSession, task: URLSessionTask, didCompleteWithError error: Error?) {
 		guard let absoluteUrl = task.originalRequest?.url?.absoluteString else {
@@ -158,12 +157,12 @@ extension MultipleDownloadsViewModel: URLSessionDownloadDelegate
 		guard let download = self.downloads.first(where: { $0.fileToDownload == absoluteUrl }) else {
 			return
 		}
-		
+
 		guard let error = error else {
 			return
 		}
 		Task { @MainActor in download.error = error.localizedDescription }
-		
+
 		let userInfo = (error as NSError).userInfo
 		if let resumeData = userInfo[NSURLSessionDownloadTaskResumeData] as? Data {
 			Task { @MainActor in download.resumeData = resumeData }

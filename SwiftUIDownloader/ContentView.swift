@@ -12,17 +12,17 @@ struct ContentView: View {
 		NavigationView {
 			VStack {
 				Spacer()
-				
+
 				NavigationLink(destination: DownloadForegroundView(vm: DownloadForegroundViewModel())) {
 					Text("Download Foreground")
 				}
 				Spacer()
-				
+
 				NavigationLink(destination: DownloadBackgroundView(vm: DownloadBackgroundViewModel())) {
 					Text("Download Background")
 				}
 				Spacer()
-				
+
 				NavigationLink(destination: MultipleDownloadsView(vm: MultipleDownloadsViewModel())) {
 					Text("Multiple Downloads")
 				}

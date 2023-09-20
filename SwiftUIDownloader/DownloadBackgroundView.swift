@@ -9,15 +9,15 @@ import SwiftUI
 
 struct DownloadBackgroundView: View {
 	@ObservedObject var vm: DownloadBackgroundViewModel
-	
+
 	var body: some View {
 		VStack {
 			Spacer()
-			
+
 			HStack {
 				Text("Download size: ")
 				Picker("Download size: ", selection: $vm.selectedDownloadSize) {
-					ForEach(vm.availableDownloadSizes, id:\.self) {
+					ForEach(vm.availableDownloadSizes, id: \.self) {
 						Text($0)
 					}
 				}
@@ -25,7 +25,7 @@ struct DownloadBackgroundView: View {
 				.disabled(vm.isBusy)
 			}
 			Spacer()
-			
+
 			if vm.error != nil {
 				Text("Error: \(vm.error!)")
 			}
@@ -50,7 +50,7 @@ struct DownloadBackgroundView: View {
 						vm.pauseDownload()
 					}
 					.disabled(!vm.canPauseDownload)
-					
+
 					Button("Resume") {
 						vm.resumeDownload()
 					}
