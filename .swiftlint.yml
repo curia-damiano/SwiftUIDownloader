@@ -2,6 +2,6 @@
 # Rule Directory Reference: https://realm.github.io/SwiftLint/rule-directory.html
 disabled_rules: # rule identifiers turned on by default to exclude from running
   - identifier_name						# to allow "vm"
-  - line_length							# to allow lines wiht comments
+  - line_length							# to allow lines with comments
   - redundant_optional_initialization	# to clarify code
   - vertical_parameter_alignment		# because of bug https://github.com/realm/SwiftLint/issues/1573

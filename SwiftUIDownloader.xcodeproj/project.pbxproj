@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A84886D12A28C0E700175D98 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = A84886D02A28C0E700175D98 /* .swiftlint.yml */; };
 		A8BEAF2827837668004685A5 /* SwiftUIDownloaderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BEAF2727837668004685A5 /* SwiftUIDownloaderApp.swift */; };
 		A8BEAF2A27837668004685A5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BEAF2927837668004685A5 /* ContentView.swift */; };
 		A8BEAF2C27837669004685A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8BEAF2B27837669004685A5 /* Assets.xcassets */; };
@@ -22,6 +21,8 @@
 
 /* Begin PBXFileReference section */
 		A84886D02A28C0E700175D98 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		A893E34F2AE979FB00D82903 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		A893E3502AE979FB00D82903 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		A8BEAF2427837668004685A5 /* SwiftUIDownloader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIDownloader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8BEAF2727837668004685A5 /* SwiftUIDownloaderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIDownloaderApp.swift; sourceTree = "<group>"; };
 		A8BEAF2927837668004685A5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -33,6 +34,7 @@
 		A8BEAF3B27837759004685A5 /* DownloadBackgroundViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadBackgroundViewModel.swift; sourceTree = "<group>"; };
 		A8BEAF3D2783778F004685A5 /* MultipleDownloadsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleDownloadsView.swift; sourceTree = "<group>"; };
 		A8BEAF3F278377B2004685A5 /* MultipleDownloadsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleDownloadsViewModel.swift; sourceTree = "<group>"; };
+		A8F37FBE2AEBE9470043F0C0 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +51,9 @@
 		A8BEAF1B27837668004685A5 = {
 			isa = PBXGroup;
 			children = (
+				A8F37FBE2AEBE9470043F0C0 /* .gitignore */,
+				A893E34F2AE979FB00D82903 /* LICENSE */,
+				A893E3502AE979FB00D82903 /* README.md */,
 				A84886D02A28C0E700175D98 /* .swiftlint.yml */,
 				A8BEAF2627837668004685A5 /* SwiftUIDownloader */,
 				A8BEAF2527837668004685A5 /* Products */,
@@ -102,7 +107,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				A84886CF2A28B7F100175D98 /* PBXTargetDependency */,
+				A826E7102AE6ECBA0061E0D0 /* PBXTargetDependency */,
 			);
 			name = SwiftUIDownloader;
 			packageProductDependencies = (
@@ -119,7 +124,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1320;
-				LastUpgradeCheck = 1320;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					A8BEAF2327837668004685A5 = {
 						CreatedOnToolsVersion = 13.2.1;
@@ -136,7 +141,7 @@
 			);
 			mainGroup = A8BEAF1B27837668004685A5;
 			packageReferences = (
-				A84886CD2A28B7E500175D98 /* XCRemoteSwiftPackageReference "SwiftLint" */,
+				A826E70E2AE6ECAD0061E0D0 /* XCRemoteSwiftPackageReference "SwiftLint" */,
 			);
 			productRefGroup = A8BEAF2527837668004685A5 /* Products */;
 			projectDirPath = "";
@@ -152,7 +157,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A84886D12A28C0E700175D98 /* .swiftlint.yml in Resources */,
 				A8BEAF2F27837669004685A5 /* Preview Assets.xcassets in Resources */,
 				A8BEAF2C27837669004685A5 /* Assets.xcassets in Resources */,
 			);
@@ -179,9 +183,9 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		A84886CF2A28B7F100175D98 /* PBXTargetDependency */ = {
+		A826E7102AE6ECBA0061E0D0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			productRef = A84886CE2A28B7F100175D98 /* SwiftLintPlugin */;
+			productRef = A826E70F2AE6ECBA0061E0D0 /* SwiftLintPlugin */;
 		};
 /* End PBXTargetDependency section */
 
@@ -190,6 +194,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -223,6 +228,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -251,6 +257,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -284,6 +291,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -386,20 +394,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		A84886CD2A28B7E500175D98 /* XCRemoteSwiftPackageReference "SwiftLint" */ = {
+		A826E70E2AE6ECAD0061E0D0 /* XCRemoteSwiftPackageReference "SwiftLint" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/SwiftLint";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.52.2;
+				minimumVersion = 0.54.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		A84886CE2A28B7F100175D98 /* SwiftLintPlugin */ = {
+		A826E70F2AE6ECBA0061E0D0 /* SwiftLintPlugin */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = A84886CD2A28B7E500175D98 /* XCRemoteSwiftPackageReference "SwiftLint" */;
+			package = A826E70E2AE6ECAD0061E0D0 /* XCRemoteSwiftPackageReference "SwiftLint" */;
 			productName = "plugin:SwiftLintPlugin";
 		};
 /* End XCSwiftPackageProductDependency section */

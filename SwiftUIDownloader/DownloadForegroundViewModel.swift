@@ -9,7 +9,7 @@ import Foundation
 
 @MainActor
 class DownloadForegroundViewModel: NSObject, ObservableObject {
-	let urlToDownloadFormat = "https://speed.hetzner.de/%1$@.bin"
+	let urlToDownloadFormat = "https://ash-speed.hetzner.com/%1$@.bin"
 	let availableDownloadSizes = ["100MB", "1GB", "10GB", "ERR"]
 	var selectedDownloadSize: String = "100MB"
 	var fileToDownload: String {

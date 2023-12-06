@@ -31,9 +31,9 @@ class MultipleDownloadsViewModel: NSObject, ObservableObject {
 	// Init of properties in actor: see https://stackoverflow.com/questions/71396296/how-do-i-fix-expression-requiring-global-actor-mainactor-cannot-appear-in-def/71412877#71412877
 	@MainActor override init() {
 		downloads = [
-			DownloadModel(fileToDownload: "https://speed.hetzner.de/100MB.bin"),
-			DownloadModel(fileToDownload: "https://speed.hetzner.de/1GB.bin"),
-			DownloadModel(fileToDownload: "https://speed.hetzner.de/10GB.bin")
+			DownloadModel(fileToDownload: "https://ash-speed.hetzner.com/100MB.bin"),
+			DownloadModel(fileToDownload: "https://ash-speed.hetzner.com/1GB.bin"),
+			DownloadModel(fileToDownload: "https://ash-speed.hetzner.com/10GB.bin")
 		]
 	}
 

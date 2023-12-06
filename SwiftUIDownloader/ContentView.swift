@@ -28,7 +28,7 @@ struct ContentView: View {
 				}
 				Spacer()
 			}
-			.navigationTitle("Swift Downloader")
+			.navigationTitle("SwiftUI Downloader")
 			.navigationBarTitleDisplayMode(.automatic)
 		}
 		.navigationViewStyle(.stack)
