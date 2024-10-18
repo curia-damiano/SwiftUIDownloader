@@ -2,7 +2,7 @@
 //  DownloadForegroundView.swift
 //  SwiftUIDownloader
 //
-//  Created by Damiano Curia on 03.01.22.
+//  Created by Damiano Curia on 06.10.2024.
 //
 
 import SwiftUI
@@ -69,13 +69,12 @@ struct DownloadForegroundView: View {
 					.disabled(!vm.canResumeDownload)
 				}
 			}
+			Spacer()
 		}
 		.padding()
 	}
 }
 
-struct DownloadForegroundView_Previews: PreviewProvider {
-	static var previews: some View {
-		DownloadForegroundView(vm: DownloadForegroundViewModel())
-	}
+#Preview {
+	DownloadForegroundView(vm: DownloadForegroundViewModel())
 }

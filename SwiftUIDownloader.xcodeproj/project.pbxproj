@@ -3,42 +3,83 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 77;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		A8BEAF2827837668004685A5 /* SwiftUIDownloaderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BEAF2727837668004685A5 /* SwiftUIDownloaderApp.swift */; };
-		A8BEAF2A27837668004685A5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BEAF2927837668004685A5 /* ContentView.swift */; };
-		A8BEAF2C27837669004685A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8BEAF2B27837669004685A5 /* Assets.xcassets */; };
-		A8BEAF2F27837669004685A5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8BEAF2E27837669004685A5 /* Preview Assets.xcassets */; };
-		A8BEAF36278376DB004685A5 /* DownloadForegroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BEAF35278376DA004685A5 /* DownloadForegroundView.swift */; };
-		A8BEAF382783770B004685A5 /* DownloadForegroundViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BEAF372783770B004685A5 /* DownloadForegroundViewModel.swift */; };
-		A8BEAF3A27837737004685A5 /* DownloadBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BEAF3927837737004685A5 /* DownloadBackgroundView.swift */; };
-		A8BEAF3C27837759004685A5 /* DownloadBackgroundViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BEAF3B27837759004685A5 /* DownloadBackgroundViewModel.swift */; };
-		A8BEAF3E2783778F004685A5 /* MultipleDownloadsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BEAF3D2783778F004685A5 /* MultipleDownloadsView.swift */; };
-		A8BEAF40278377B2004685A5 /* MultipleDownloadsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BEAF3F278377B2004685A5 /* MultipleDownloadsViewModel.swift */; };
-/* End PBXBuildFile section */
+/* Begin PBXContainerItemProxy section */
+		A855F35B2CB3145A00A2B435 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A855F3412CB3145900A2B435 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A855F3482CB3145900A2B435;
+			remoteInfo = SwiftUIDownloader;
+		};
+		A855F3652CB3145A00A2B435 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A855F3412CB3145900A2B435 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A855F3482CB3145900A2B435;
+			remoteInfo = SwiftUIDownloader;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A84886D02A28C0E700175D98 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
-		A893E34F2AE979FB00D82903 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		A893E3502AE979FB00D82903 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		A8BEAF2427837668004685A5 /* SwiftUIDownloader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIDownloader.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A8BEAF2727837668004685A5 /* SwiftUIDownloaderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIDownloaderApp.swift; sourceTree = "<group>"; };
-		A8BEAF2927837668004685A5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		A8BEAF2B27837669004685A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A8BEAF2E27837669004685A5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		A8BEAF35278376DA004685A5 /* DownloadForegroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadForegroundView.swift; sourceTree = "<group>"; };
-		A8BEAF372783770B004685A5 /* DownloadForegroundViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadForegroundViewModel.swift; sourceTree = "<group>"; };
-		A8BEAF3927837737004685A5 /* DownloadBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadBackgroundView.swift; sourceTree = "<group>"; };
-		A8BEAF3B27837759004685A5 /* DownloadBackgroundViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadBackgroundViewModel.swift; sourceTree = "<group>"; };
-		A8BEAF3D2783778F004685A5 /* MultipleDownloadsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleDownloadsView.swift; sourceTree = "<group>"; };
-		A8BEAF3F278377B2004685A5 /* MultipleDownloadsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleDownloadsViewModel.swift; sourceTree = "<group>"; };
-		A8F37FBE2AEBE9470043F0C0 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		A855F3492CB3145900A2B435 /* SwiftUIDownloader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIDownloader.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A855F35A2CB3145A00A2B435 /* SwiftUIDownloaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUIDownloaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A855F3642CB3145A00A2B435 /* SwiftUIDownloaderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUIDownloaderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8E693E12CB544AB00333221 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		A8E693E22CB544AB00333221 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		A8E693E32CB544AB00333221 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		A8E693E42CB544AB00333221 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		A855F4212CB464D200A2B435 /* Exceptions for "SwiftUIDownloader" folder in "SwiftUIDownloader" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = A855F3482CB3145900A2B435 /* SwiftUIDownloader */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		A855F34B2CB3145900A2B435 /* SwiftUIDownloader */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				A855F4212CB464D200A2B435 /* Exceptions for "SwiftUIDownloader" folder in "SwiftUIDownloader" target */,
+			);
+			path = SwiftUIDownloader;
+			sourceTree = "<group>";
+		};
+		A855F35D2CB3145A00A2B435 /* SwiftUIDownloaderTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = SwiftUIDownloaderTests;
+			sourceTree = "<group>";
+		};
+		A855F3672CB3145A00A2B435 /* SwiftUIDownloaderUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = SwiftUIDownloaderUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
-		A8BEAF2127837668004685A5 /* Frameworks */ = {
+		A855F3462CB3145900A2B435 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A855F3572CB3145A00A2B435 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A855F3612CB3145A00A2B435 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -48,157 +89,223 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A8BEAF1B27837668004685A5 = {
+		A855F3402CB3145900A2B435 = {
 			isa = PBXGroup;
 			children = (
-				A8F37FBE2AEBE9470043F0C0 /* .gitignore */,
-				A893E34F2AE979FB00D82903 /* LICENSE */,
-				A893E3502AE979FB00D82903 /* README.md */,
-				A84886D02A28C0E700175D98 /* .swiftlint.yml */,
-				A8BEAF2627837668004685A5 /* SwiftUIDownloader */,
-				A8BEAF2527837668004685A5 /* Products */,
+				A8E693E12CB544AB00333221 /* .gitignore */,
+				A8E693E22CB544AB00333221 /* .swiftlint.yml */,
+				A8E693E32CB544AB00333221 /* LICENSE */,
+				A8E693E42CB544AB00333221 /* README.md */,
+				A855F34B2CB3145900A2B435 /* SwiftUIDownloader */,
+				A855F35D2CB3145A00A2B435 /* SwiftUIDownloaderTests */,
+				A855F3672CB3145A00A2B435 /* SwiftUIDownloaderUITests */,
+				A855F34A2CB3145900A2B435 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		A8BEAF2527837668004685A5 /* Products */ = {
+		A855F34A2CB3145900A2B435 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A8BEAF2427837668004685A5 /* SwiftUIDownloader.app */,
+				A855F3492CB3145900A2B435 /* SwiftUIDownloader.app */,
+				A855F35A2CB3145A00A2B435 /* SwiftUIDownloaderTests.xctest */,
+				A855F3642CB3145A00A2B435 /* SwiftUIDownloaderUITests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		A8BEAF2627837668004685A5 /* SwiftUIDownloader */ = {
-			isa = PBXGroup;
-			children = (
-				A8BEAF2727837668004685A5 /* SwiftUIDownloaderApp.swift */,
-				A8BEAF2927837668004685A5 /* ContentView.swift */,
-				A8BEAF2B27837669004685A5 /* Assets.xcassets */,
-				A8BEAF2D27837669004685A5 /* Preview Content */,
-				A8BEAF35278376DA004685A5 /* DownloadForegroundView.swift */,
-				A8BEAF372783770B004685A5 /* DownloadForegroundViewModel.swift */,
-				A8BEAF3927837737004685A5 /* DownloadBackgroundView.swift */,
-				A8BEAF3B27837759004685A5 /* DownloadBackgroundViewModel.swift */,
-				A8BEAF3D2783778F004685A5 /* MultipleDownloadsView.swift */,
-				A8BEAF3F278377B2004685A5 /* MultipleDownloadsViewModel.swift */,
-			);
-			path = SwiftUIDownloader;
-			sourceTree = "<group>";
-		};
-		A8BEAF2D27837669004685A5 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				A8BEAF2E27837669004685A5 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A8BEAF2327837668004685A5 /* SwiftUIDownloader */ = {
+		A855F3482CB3145900A2B435 /* SwiftUIDownloader */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A8BEAF3227837669004685A5 /* Build configuration list for PBXNativeTarget "SwiftUIDownloader" */;
+			buildConfigurationList = A855F36E2CB3145A00A2B435 /* Build configuration list for PBXNativeTarget "SwiftUIDownloader" */;
 			buildPhases = (
-				A8BEAF2027837668004685A5 /* Sources */,
-				A8BEAF2127837668004685A5 /* Frameworks */,
-				A8BEAF2227837668004685A5 /* Resources */,
+				A855F3452CB3145900A2B435 /* Sources */,
+				A855F3462CB3145900A2B435 /* Frameworks */,
+				A855F3472CB3145900A2B435 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				A826E7102AE6ECBA0061E0D0 /* PBXTargetDependency */,
+				A855F3892CB31B4500A2B435 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				A855F34B2CB3145900A2B435 /* SwiftUIDownloader */,
 			);
 			name = SwiftUIDownloader;
 			packageProductDependencies = (
 			);
 			productName = SwiftUIDownloader;
-			productReference = A8BEAF2427837668004685A5 /* SwiftUIDownloader.app */;
+			productReference = A855F3492CB3145900A2B435 /* SwiftUIDownloader.app */;
 			productType = "com.apple.product-type.application";
+		};
+		A855F3592CB3145A00A2B435 /* SwiftUIDownloaderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A855F3712CB3145A00A2B435 /* Build configuration list for PBXNativeTarget "SwiftUIDownloaderTests" */;
+			buildPhases = (
+				A855F3562CB3145A00A2B435 /* Sources */,
+				A855F3572CB3145A00A2B435 /* Frameworks */,
+				A855F3582CB3145A00A2B435 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A855F35C2CB3145A00A2B435 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				A855F35D2CB3145A00A2B435 /* SwiftUIDownloaderTests */,
+			);
+			name = SwiftUIDownloaderTests;
+			packageProductDependencies = (
+			);
+			productName = SwiftUIDownloaderTests;
+			productReference = A855F35A2CB3145A00A2B435 /* SwiftUIDownloaderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A855F3632CB3145A00A2B435 /* SwiftUIDownloaderUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A855F3742CB3145A00A2B435 /* Build configuration list for PBXNativeTarget "SwiftUIDownloaderUITests" */;
+			buildPhases = (
+				A855F3602CB3145A00A2B435 /* Sources */,
+				A855F3612CB3145A00A2B435 /* Frameworks */,
+				A855F3622CB3145A00A2B435 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A855F3662CB3145A00A2B435 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				A855F3672CB3145A00A2B435 /* SwiftUIDownloaderUITests */,
+			);
+			name = SwiftUIDownloaderUITests;
+			packageProductDependencies = (
+			);
+			productName = SwiftUIDownloaderUITests;
+			productReference = A855F3642CB3145A00A2B435 /* SwiftUIDownloaderUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		A8BEAF1C27837668004685A5 /* Project object */ = {
+		A855F3412CB3145900A2B435 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1320;
-				LastUpgradeCheck = 1500;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
 				TargetAttributes = {
-					A8BEAF2327837668004685A5 = {
-						CreatedOnToolsVersion = 13.2.1;
+					A855F3482CB3145900A2B435 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					A855F3592CB3145A00A2B435 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = A855F3482CB3145900A2B435;
+					};
+					A855F3632CB3145A00A2B435 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = A855F3482CB3145900A2B435;
 					};
 				};
 			};
-			buildConfigurationList = A8BEAF1F27837668004685A5 /* Build configuration list for PBXProject "SwiftUIDownloader" */;
-			compatibilityVersion = "Xcode 13.0";
+			buildConfigurationList = A855F3442CB3145900A2B435 /* Build configuration list for PBXProject "SwiftUIDownloader" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = A8BEAF1B27837668004685A5;
+			mainGroup = A855F3402CB3145900A2B435;
+			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				A826E70E2AE6ECAD0061E0D0 /* XCRemoteSwiftPackageReference "SwiftLint" */,
+				A855F3772CB31A8800A2B435 /* XCRemoteSwiftPackageReference "SwiftLint" */,
 			);
-			productRefGroup = A8BEAF2527837668004685A5 /* Products */;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = A855F34A2CB3145900A2B435 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A8BEAF2327837668004685A5 /* SwiftUIDownloader */,
+				A855F3482CB3145900A2B435 /* SwiftUIDownloader */,
+				A855F3592CB3145A00A2B435 /* SwiftUIDownloaderTests */,
+				A855F3632CB3145A00A2B435 /* SwiftUIDownloaderUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		A8BEAF2227837668004685A5 /* Resources */ = {
+		A855F3472CB3145900A2B435 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A8BEAF2F27837669004685A5 /* Preview Assets.xcassets in Resources */,
-				A8BEAF2C27837669004685A5 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A855F3582CB3145A00A2B435 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A855F3622CB3145A00A2B435 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		A8BEAF2027837668004685A5 /* Sources */ = {
+		A855F3452CB3145900A2B435 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A8BEAF3C27837759004685A5 /* DownloadBackgroundViewModel.swift in Sources */,
-				A8BEAF3E2783778F004685A5 /* MultipleDownloadsView.swift in Sources */,
-				A8BEAF3A27837737004685A5 /* DownloadBackgroundView.swift in Sources */,
-				A8BEAF2A27837668004685A5 /* ContentView.swift in Sources */,
-				A8BEAF40278377B2004685A5 /* MultipleDownloadsViewModel.swift in Sources */,
-				A8BEAF382783770B004685A5 /* DownloadForegroundViewModel.swift in Sources */,
-				A8BEAF2827837668004685A5 /* SwiftUIDownloaderApp.swift in Sources */,
-				A8BEAF36278376DB004685A5 /* DownloadForegroundView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A855F3562CB3145A00A2B435 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A855F3602CB3145A00A2B435 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		A826E7102AE6ECBA0061E0D0 /* PBXTargetDependency */ = {
+		A855F35C2CB3145A00A2B435 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			productRef = A826E70F2AE6ECBA0061E0D0 /* SwiftLintPlugin */;
+			target = A855F3482CB3145900A2B435 /* SwiftUIDownloader */;
+			targetProxy = A855F35B2CB3145A00A2B435 /* PBXContainerItemProxy */;
+		};
+		A855F3662CB3145A00A2B435 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A855F3482CB3145900A2B435 /* SwiftUIDownloader */;
+			targetProxy = A855F3652CB3145A00A2B435 /* PBXContainerItemProxy */;
+		};
+		A855F3892CB31B4500A2B435 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = A855F3882CB31B4500A2B435 /* SwiftLintBuildToolPlugin */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		A8BEAF3027837669004685A5 /* Debug */ = {
+		A855F36C2CB3145A00A2B435 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
-				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -229,7 +336,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -243,25 +350,25 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
 			};
 			name = Debug;
 		};
-		A8BEAF3127837669004685A5 /* Release */ = {
+		A855F36D2CB3145A00A2B435 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
-				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -292,7 +399,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -300,93 +407,220 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				SDKROOT = iphoneos;
+				RUN_CLANG_STATIC_ANALYZER = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				VALIDATE_PRODUCT = YES;
+				SWIFT_VERSION = 6.0;
 			};
 			name = Release;
 		};
-		A8BEAF3327837669004685A5 /* Debug */ = {
+		A855F36F2CB3145A00A2B435 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SwiftUIDownloader/SwiftUIDownloader.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUIDownloader/Preview Content\"";
 				DEVELOPMENT_TEAM = LA5247PXS2;
+				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_FILE = SwiftUIDownloader/Info.plist;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = me.curia.SwiftUIDownloader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				XROS_DEPLOYMENT_TARGET = 1.0;
 			};
 			name = Debug;
 		};
-		A8BEAF3427837669004685A5 /* Release */ = {
+		A855F3702CB3145A00A2B435 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SwiftUIDownloader/SwiftUIDownloader.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUIDownloader/Preview Content\"";
 				DEVELOPMENT_TEAM = LA5247PXS2;
+				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_FILE = SwiftUIDownloader/Info.plist;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = me.curia.SwiftUIDownloader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				XROS_DEPLOYMENT_TARGET = 1.0;
+			};
+			name = Release;
+		};
+		A855F3722CB3145A00A2B435 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LA5247PXS2;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.curia.SwiftUIDownloaderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftUIDownloader.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SwiftUIDownloader";
+				XROS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		A855F3732CB3145A00A2B435 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LA5247PXS2;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.curia.SwiftUIDownloaderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftUIDownloader.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SwiftUIDownloader";
+				XROS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		A855F3752CB3145A00A2B435 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LA5247PXS2;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.curia.SwiftUIDownloaderUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TEST_TARGET_NAME = SwiftUIDownloader;
+				XROS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		A855F3762CB3145A00A2B435 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LA5247PXS2;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.curia.SwiftUIDownloaderUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TEST_TARGET_NAME = SwiftUIDownloader;
+				XROS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A8BEAF1F27837668004685A5 /* Build configuration list for PBXProject "SwiftUIDownloader" */ = {
+		A855F3442CB3145900A2B435 /* Build configuration list for PBXProject "SwiftUIDownloader" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A8BEAF3027837669004685A5 /* Debug */,
-				A8BEAF3127837669004685A5 /* Release */,
+				A855F36C2CB3145A00A2B435 /* Debug */,
+				A855F36D2CB3145A00A2B435 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A8BEAF3227837669004685A5 /* Build configuration list for PBXNativeTarget "SwiftUIDownloader" */ = {
+		A855F36E2CB3145A00A2B435 /* Build configuration list for PBXNativeTarget "SwiftUIDownloader" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A8BEAF3327837669004685A5 /* Debug */,
-				A8BEAF3427837669004685A5 /* Release */,
+				A855F36F2CB3145A00A2B435 /* Debug */,
+				A855F3702CB3145A00A2B435 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A855F3712CB3145A00A2B435 /* Build configuration list for PBXNativeTarget "SwiftUIDownloaderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A855F3722CB3145A00A2B435 /* Debug */,
+				A855F3732CB3145A00A2B435 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A855F3742CB3145A00A2B435 /* Build configuration list for PBXNativeTarget "SwiftUIDownloaderUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A855F3752CB3145A00A2B435 /* Debug */,
+				A855F3762CB3145A00A2B435 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -394,23 +628,23 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		A826E70E2AE6ECAD0061E0D0 /* XCRemoteSwiftPackageReference "SwiftLint" */ = {
+		A855F3772CB31A8800A2B435 /* XCRemoteSwiftPackageReference "SwiftLint" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/SwiftLint";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.54.0;
+				minimumVersion = 0.57.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		A826E70F2AE6ECBA0061E0D0 /* SwiftLintPlugin */ = {
+		A855F3882CB31B4500A2B435 /* SwiftLintBuildToolPlugin */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = A826E70E2AE6ECAD0061E0D0 /* XCRemoteSwiftPackageReference "SwiftLint" */;
-			productName = "plugin:SwiftLintPlugin";
+			package = A855F3772CB31A8800A2B435 /* XCRemoteSwiftPackageReference "SwiftLint" */;
+			productName = "plugin:SwiftLintBuildToolPlugin";
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
-	rootObject = A8BEAF1C27837668004685A5 /* Project object */;
+	rootObject = A855F3412CB3145900A2B435 /* Project object */;
 }

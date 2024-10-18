@@ -2,7 +2,7 @@
 //  DownloadBackgroundViewModel.swift
 //  SwiftUIDownloader
 //
-//  Created by Damiano Curia on 03.01.22.
+//  Created by Damiano Curia on 06.10.2024.
 //
 
 import Foundation
@@ -85,44 +85,44 @@ class DownloadBackgroundViewModel: NSObject, ObservableObject {
 
 extension DownloadBackgroundViewModel: URLSessionDownloadDelegate {
 	// https://developer.apple.com/documentation/foundation/url_loading_system/downloading_files_from_websites
-	func urlSession(_ session: URLSession,
-					downloadTask: URLSessionDownloadTask,
-					didWriteData bytesWritten: Int64,
-					totalBytesWritten: Int64,
-					totalBytesExpectedToWrite: Int64) {
-		if downloadTask != self.downloadTask {
-			return
+	nonisolated func urlSession(_ session: URLSession,
+					 downloadTask: URLSessionDownloadTask,
+					 didWriteData bytesWritten: Int64,
+					 totalBytesWritten: Int64,
+					 totalBytesExpectedToWrite: Int64) {
+		Task { @MainActor in
+			if downloadTask != self.downloadTask {
+				return
+			}
+
+			let percentage = Int(totalBytesWritten * 100 / totalBytesExpectedToWrite)
+
+			self.percentage = percentage
 		}
-
-		let percentage = Int(totalBytesWritten * 100 / totalBytesExpectedToWrite)
-
-		Task { @MainActor in self.percentage = percentage }
 	}
 
 	// https://developer.apple.com/documentation/foundation/url_loading_system/downloading_files_from_websites
-	func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didFinishDownloadingTo location: URL) {
-		if downloadTask != self.downloadTask {
-			return
-		}
-
-		defer {
-			Task { @MainActor in self.isBusy = false }
-		}
-
-		guard let httpResponse = downloadTask.response as? HTTPURLResponse else {
-			Task { @MainActor in self.error = "No HTTP Result" }
-			return
-		}
-		guard (200...299).contains(httpResponse.statusCode) else {
-			Task { @MainActor in self.error = "Http Result: \(httpResponse.statusCode)" }
-			return
-		}
-
-		let fileName = location.path
-		let attributes = try? FileManager.default.attributesOfItem(atPath: fileName)
-		let fileSize = attributes?[.size] as? UInt64
-
+	nonisolated func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didFinishDownloadingTo location: URL) {
 		Task { @MainActor in
+			if downloadTask != self.downloadTask {
+				return
+			}
+
+			self.isBusy = false
+
+			guard let httpResponse = downloadTask.response as? HTTPURLResponse else {
+				self.error = "No HTTP Result"
+				return
+			}
+			guard (200...299).contains(httpResponse.statusCode) else {
+				self.error = "Http Result: \(httpResponse.statusCode)"
+				return
+			}
+
+			let fileName = location.path
+			let attributes = try? FileManager.default.attributesOfItem(atPath: fileName)
+			let fileSize = attributes?[.size] as? UInt64
+
 			self.error = nil
 			self.percentage = 100
 			self.fileName = fileName
@@ -132,17 +132,18 @@ extension DownloadBackgroundViewModel: URLSessionDownloadDelegate {
 	}
 
 	// https://developer.apple.com/documentation/foundation/url_loading_system/pausing_and_resuming_downloads
-	func urlSession(_ session: URLSession, task: URLSessionTask, didCompleteWithError error: Error?) {
+	nonisolated func urlSession(_ session: URLSession, task: URLSessionTask, didCompleteWithError error: Error?) {
 		guard let error = error else {
 			return
 		}
-		Task { @MainActor in self.error = error.localizedDescription }
 
-		let userInfo = (error as NSError).userInfo
-		if let resumeData = userInfo[NSURLSessionDownloadTaskResumeData] as? Data {
-			Task { @MainActor in self.resumeData = resumeData }
-		} else {
-			Task { @MainActor in
+		Task { @MainActor in
+			self.error = error.localizedDescription
+
+			let userInfo = (error as NSError).userInfo
+			if let resumeData = userInfo[NSURLSessionDownloadTaskResumeData] as? Data {
+				self.resumeData = resumeData
+			} else {
 				self.isBusy = false
 				self.downloadTask = nil
 			}

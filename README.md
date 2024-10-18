@@ -5,6 +5,7 @@ I have written the following blog posts to show parts of this project:
 * [SwiftUI Background Downloads](https://curia.me/swiftui-background-downloads/)
 * [URLSession async in iOS 13 and 14](https://curia.me/urlsession-async-in-ios-13-and-14/)
 * [URLSession default User-Agent](https://curia.me/urlsession-default-user-agent/)
+* [Update of my mobile apps to Swift 6](https://curia.me/update-of-my-mobile-apps-to-swift-6/)
 
 ## Authors
 

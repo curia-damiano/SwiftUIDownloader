@@ -2,7 +2,7 @@
 //  MultipleDownloadsView.swift
 //  SwiftUIDownloader
 //
-//  Created by Damiano Curia on 03.01.22.
+//  Created by Damiano Curia on 06.10.2024.
 //
 
 import SwiftUI
@@ -12,19 +12,11 @@ struct MultipleDownloadsView: View {
 
 	var body: some View {
 		VStack {
-			List {
-				ForEach(vm.downloads.indices, id: \.self) { index in // See https://twitter.com/lostmoa_nz/status/1256152748447330304
-					MultipleDownloadsListRowView(vm: vm, download: vm.downloads[index])
-				}
+			ForEach(vm.downloads.indices, id: \.self) { index in // See https://twitter.com/lostmoa_nz/status/1256152748447330304
+				MultipleDownloadsListRowView(vm: vm, download: vm.downloads[index])
 			}
 		}
 		.padding()
-	}
-}
-
-struct MultipleDownloadsView_Previews: PreviewProvider {
-	static var previews: some View {
-		MultipleDownloadsView(vm: MultipleDownloadsViewModel())
 	}
 }
 
@@ -34,6 +26,8 @@ struct MultipleDownloadsListRowView: View {
 
 	var body: some View {
 		VStack {
+			Spacer()
+
 			Group {
 				Text(download.fileToDownload)
 				Text("Status: " + (download.isBusy ? "downloading..." : "idle"))
@@ -66,6 +60,11 @@ struct MultipleDownloadsListRowView: View {
 				}
 				.disabled(!vm.canResumeDownload(download: download))
 			}
+			Spacer()
 		}
 	}
+}
+
+#Preview {
+	MultipleDownloadsView(vm: MultipleDownloadsViewModel())
 }

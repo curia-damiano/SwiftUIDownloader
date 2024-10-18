@@ -2,7 +2,7 @@
 //  MultipleDownloadsViewModel.swift
 //  SwiftUIDownloader
 //
-//  Created by Damiano Curia on 03.01.22.
+//  Created by Damiano Curia on 06.10.2024.
 //
 
 import Foundation
@@ -98,49 +98,49 @@ class MultipleDownloadsViewModel: NSObject, ObservableObject {
 
 extension MultipleDownloadsViewModel: URLSessionDownloadDelegate {
 	// https://developer.apple.com/documentation/foundation/url_loading_system/downloading_files_from_websites
-	func urlSession(_ session: URLSession,
-					downloadTask: URLSessionDownloadTask,
-					didWriteData bytesWritten: Int64,
-					totalBytesWritten: Int64,
-					totalBytesExpectedToWrite: Int64) {
-		guard let download = self.downloads.first(where: { $0.downloadTask == downloadTask }) else {
-			return
-		}
-		let percentage = Int(totalBytesWritten * 100 / totalBytesExpectedToWrite)
+	nonisolated func urlSession(_ session: URLSession,
+					 downloadTask: URLSessionDownloadTask,
+					 didWriteData bytesWritten: Int64,
+					 totalBytesWritten: Int64,
+					 totalBytesExpectedToWrite: Int64) {
+		Task { @MainActor in
+			guard let download = self.downloads.first(where: { $0.downloadTask == downloadTask }) else {
+				return
+			}
+			let percentage = Int(totalBytesWritten * 100 / totalBytesExpectedToWrite)
 
-		Task { @MainActor in download.percentage = percentage }
+			download.percentage = percentage
+		}
 	}
 
 	// https://developer.apple.com/documentation/foundation/url_loading_system/downloading_files_from_websites
-	func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didFinishDownloadingTo location: URL) {
-		/*guard let absoluteUrl = downloadTask.originalRequest?.url?.absoluteString else {
-			return
-		}
-		guard let download = self.downloads.first(where: { $0.fileToDownload == absoluteUrl }) else {
-			return
-		}*/
-		guard let download = self.downloads.first(where: { $0.downloadTask == downloadTask }) else {
-			return
-		}
-
-		defer {
-			Task { @MainActor in download.isBusy = false }
-		}
-
-		guard let httpResponse = downloadTask.response as? HTTPURLResponse else {
-			Task { @MainActor in download.error = "No HTTP Result" }
-			return
-		}
-		guard (200...299).contains(httpResponse.statusCode) else {
-			Task { @MainActor in download.error = "Http Result: \(httpResponse.statusCode)" }
-			return
-		}
-
-		let fileName = location.path
-		let attributes = try? FileManager.default.attributesOfItem(atPath: fileName)
-		let fileSize = attributes?[.size] as? UInt64
-
+	nonisolated func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didFinishDownloadingTo location: URL) {
 		Task { @MainActor in
+			/*guard let absoluteUrl = downloadTask.originalRequest?.url?.absoluteString else {
+				return
+			 }
+			 guard let download = self.downloads.first(where: { $0.fileToDownload == absoluteUrl }) else {
+				return
+			 }*/
+			guard let download = self.downloads.first(where: { $0.downloadTask == downloadTask }) else {
+				return
+			}
+
+			download.isBusy = false
+
+			guard let httpResponse = downloadTask.response as? HTTPURLResponse else {
+				download.error = "No HTTP Result"
+				return
+			}
+			guard (200...299).contains(httpResponse.statusCode) else {
+				download.error = "Http Result: \(httpResponse.statusCode)"
+				return
+			}
+
+			let fileName = location.path
+			let attributes = try? FileManager.default.attributesOfItem(atPath: fileName)
+			let fileSize = attributes?[.size] as? UInt64
+
 			download.error = nil
 			download.percentage = 100
 			download.fileName = fileName
@@ -150,24 +150,25 @@ extension MultipleDownloadsViewModel: URLSessionDownloadDelegate {
 	}
 
 	// https://developer.apple.com/documentation/foundation/url_loading_system/pausing_and_resuming_downloads
-	func urlSession(_ session: URLSession, task: URLSessionTask, didCompleteWithError error: Error?) {
+	nonisolated func urlSession(_ session: URLSession, task: URLSessionTask, didCompleteWithError error: Error?) {
 		guard let absoluteUrl = task.originalRequest?.url?.absoluteString else {
 			return
 		}
-		guard let download = self.downloads.first(where: { $0.fileToDownload == absoluteUrl }) else {
-			return
-		}
 
-		guard let error = error else {
-			return
-		}
-		Task { @MainActor in download.error = error.localizedDescription }
+		Task { @MainActor in
+			guard let download = self.downloads.first(where: { $0.fileToDownload == absoluteUrl }) else {
+				return
+			}
 
-		let userInfo = (error as NSError).userInfo
-		if let resumeData = userInfo[NSURLSessionDownloadTaskResumeData] as? Data {
-			Task { @MainActor in download.resumeData = resumeData }
-		} else {
-			Task { @MainActor in
+			guard let error = error else {
+				return
+			}
+			download.error = error.localizedDescription
+
+			let userInfo = (error as NSError).userInfo
+			if let resumeData = userInfo[NSURLSessionDownloadTaskResumeData] as? Data {
+				download.resumeData = resumeData
+			} else {
 				download.isBusy = false
 				download.downloadTask = nil
 			}

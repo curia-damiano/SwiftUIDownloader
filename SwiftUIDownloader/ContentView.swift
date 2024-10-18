@@ -2,41 +2,28 @@
 //  ContentView.swift
 //  SwiftUIDownloader
 //
-//  Created by Damiano Curia on 03.01.22.
+//  Created by Damiano Curia on 06.10.2024.
 //
 
 import SwiftUI
 
 struct ContentView: View {
 	var body: some View {
-		NavigationView {
-			VStack {
-				Spacer()
+		NavigationStack {
+			Spacer()
 
-				NavigationLink(destination: DownloadForegroundView(vm: DownloadForegroundViewModel())) {
-					Text("Download Foreground")
-				}
-				Spacer()
+			NavigationLink("Download Foreground", destination: DownloadForegroundView(vm: DownloadForegroundViewModel()))
+			Spacer()
 
-				NavigationLink(destination: DownloadBackgroundView(vm: DownloadBackgroundViewModel())) {
-					Text("Download Background")
-				}
-				Spacer()
+			NavigationLink("Download Background", destination: DownloadBackgroundView(vm: DownloadBackgroundViewModel()))
+			Spacer()
 
-				NavigationLink(destination: MultipleDownloadsView(vm: MultipleDownloadsViewModel())) {
-					Text("Multiple Downloads")
-				}
-				Spacer()
-			}
-			.navigationTitle("SwiftUI Downloader")
-			.navigationBarTitleDisplayMode(.automatic)
+			NavigationLink("Multiple Downloads", destination: MultipleDownloadsView(vm: MultipleDownloadsViewModel()))
+			Spacer()
 		}
-		.navigationViewStyle(.stack)
 	}
 }
 
-struct ContentView_Previews: PreviewProvider {
-	static var previews: some View {
-		ContentView()
-	}
+#Preview {
+	ContentView()
 }
